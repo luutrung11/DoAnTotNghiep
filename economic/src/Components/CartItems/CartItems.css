@@ -1,66 +1,91 @@
 .cartitems{
-    margin: 100px 170px;
+    margin: 60px 170px 100px;
 }
 .cartitems hr{
-    height: 3px;
-    background: #e2e2e2;
+    height: 1px;
+    background: var(--border);
     border: 0;
 }
 .cartitems-format-main{
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    gap: 75px;
-    padding: 20px 0px;
-    color: #454545;
-    font-size: 18px;
+    gap: 60px;
+    padding: 18px 0px;
+    color: var(--text-dark);
+    font-size: 17px;
     font-weight: 600;
 }
 .cartitems-format{
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
+    color: var(--text-mid);
 }
 .carticon-product-icon{
-    height: 62px;
+    height: 70px;
+    width: 56px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
 }
 .cartitems-remove-icon{
-    width: 15px;
+    width: 14px;
     margin: 0px 40px;
     cursor: pointer;
+    transition: var(--transition);
+}
+.cartitems-remove-icon:hover{
+    transform: scale(1.25);
 }
 .cartitems-quantity{
-    width: 64px;
-    height: 50px;
-    border: 2px solid #ebebeb;
+    width: 56px;
+    height: 44px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
     background: #fff;
+    font-weight: 600;
 }
 .cartitems-down{
     display: flex;
-    margin: 100px 0px;
+    gap: 60px;
+    margin: 80px 0px;
 }
 .cartitems-total{
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 200px;
-    gap: 40px;
+    gap: 30px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+.cartitems-total h1{
+    font-size: 26px;
 }
 .cartitems-total-item{
     display: flex;
     justify-content: space-between;
-    padding: 15px 0px;
-
+    padding: 12px 0px;
+    color: var(--text-mid);
+}
+.cartitems-total-item h3{
+    color: var(--text-dark);
+    font-size: 20px;
 }
 .cartitems-total button{
-    width: 262px;
-    height: 58px;
-    outline: none;
-    border: none;
-    background: #ff5a5a;
+    width: 260px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary) 0%, #ff7b54 100%);
     color: #fff;
     font-size: 16px;
     font-weight: 600;
-    cursor: pointer;
+    border-radius: 75px;
+    box-shadow: 0 10px 25px rgba(255,65,65,0.3);
+}
+.cartitems-total button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(255,65,65,0.4);
 }
 .cartitems-promocode{
     flex: 1;
@@ -68,28 +93,88 @@
     font-weight: 500;
 }
 .cartitems-promocode p{
-    color: #555;
+    color: var(--text-mid);
 }
 .cartitems-promobox{
-    width: 504px;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
     margin-top: 15px;
-    padding-left: 20px;
-    height: 58px;
-    background: #eaeaea;
+    height: 56px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 75px;
+    overflow: hidden;
 }
 .cartitems-promobox input{
+    flex: 1;
     border: none;
     outline: none;
     background: transparent;
-    font-size: 16px;
-    width: 330px;
-    height: 50px;
+    font-size: 15px;
+    padding-left: 24px;
 }
 .cartitems-promobox button{
-    width: 170px;
-    height: 58px;
-    font-size: 16px;
-    background: black;
+    width: 160px;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    background: var(--text-dark);
     color: white;
-    cursor: pointer;
+    flex-shrink: 0;
+}
+.cartitems-promobox button:hover{
+    background: var(--primary);
+}
+@media(max-width:1280px){
+    .cartitems{
+        margin: 40px 60px 80px;
+    }
+    .cartitems-format-main{
+        gap: 30px;
+    }
+}
+@media(max-width:1024px){
+    .cartitems{
+        margin: 30px 24px 60px;
+    }
+    .cartitems-format-main{
+        grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+        gap: 16px;
+        font-size: 14px;
+    }
+    .cartitems-format{
+        font-size: 13px;
+    }
+    .cartitems-remove-icon{
+        margin: 0 10px;
+    }
+    .cartitems-down{
+        flex-direction: column-reverse;
+        gap: 40px;
+        margin: 50px 0;
+    }
+}
+@media(max-width:800px){
+    .cartitems{
+        margin: 20px 12px 50px;
+    }
+    .cartitems-format-main{
+        gap: 8px;
+        font-size: 12px;
+    }
+    .carticon-product-icon{
+        height: 50px;
+        width: 40px;
+    }
+    .cartitems-quantity{
+        width: 40px;
+        height: 34px;
+    }
+    .cartitems-total{
+        padding: 20px;
+    }
+    .cartitems-total button{
+        width: 100%;
+    }
 }

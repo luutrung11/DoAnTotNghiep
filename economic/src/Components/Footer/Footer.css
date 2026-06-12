@@ -3,53 +3,94 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
+    padding-top: 60px;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border);
 }
 .footer-logo{
     display: flex;
     align-items: center;
-    gap: 20px;
-
+    gap: 16px;
+}
+.footer-logo img{
+    width: 56px;
 }
 .footer-logo p{
-    color: #383838;
-    font-size: 46px;
+    color: var(--text-dark);
+    font-size: 38px;
     font-weight: 700;
+    letter-spacing: 2px;
 }
 .footer-links{
     display: flex;
     list-style: none;
-    gap: 50px;
-    color: #252525;
-    font-size: 20px;
+    gap: 44px;
+    color: var(--text-mid);
+    font-size: 17px;
+    font-weight: 500;
 }
 .footer-links li{
     cursor: pointer;
+    transition: color 0.25s ease;
+}
+.footer-links li:hover{
+    color: var(--primary);
 }
 .footer-social-icon{
     display: flex;
-    gap: 20px;
+    gap: 16px;
 }
 .footer-icons-container{
-    padding: 10px;
-    padding-bottom: 6px;
-    background: #fbfbfb;
-    border: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+.footer-icons-container:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
 }
 .footer-copyright{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
     width: 100%;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    font-size: 20px;
+    padding-bottom: 30px;
+    color: var(--text-mid);
+    font-size: 16px;
 }
 .footer-copyright hr{
     width: 80%;
     border: none;
     border-radius: 10px;
-    height: 3px;
-    background: #c7c7c7;
+    height: 1px;
+    background: #dcdcdc;
+}
+@media(max-width:800px){
+    .footer{
+        gap: 28px;
+        padding-top: 40px;
+    }
+    .footer-logo p{
+        font-size: 28px;
+    }
+    .footer-links{
+        gap: 20px;
+        font-size: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-copyright{
+        font-size: 13px;
+    }
 }
