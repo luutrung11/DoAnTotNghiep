@@ -1,0 +1,65 @@
+.admin-orders {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+}
+
+.admin-orders h1 {
+    margin-bottom: 20px;
+}
+
+.admin-order-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 18px;
+    background: #fff;
+}
+
+.admin-order-info {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin-order-items p,
+.admin-order-address p,
+.admin-order-meta p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.admin-order-status select {
+    width: 100%;
+    height: 42px;
+    padding: 0 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.admin-order-delete {
+    width: 100%;
+    height: 42px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #e53935;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.admin-order-delete:hover {
+    background: #c62828;
+}
+
+@media (max-width: 900px) {
+    .admin-order-info {
+        grid-template-columns: 1fr;
+    }
+}

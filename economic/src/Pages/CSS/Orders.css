@@ -1,0 +1,76 @@
+.orders {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.orders h1 {
+    margin-bottom: 20px;
+}
+
+.orders-msg {
+    padding: 14px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.orders-msg.success {
+    background: #e3f9e5;
+    color: #1b7e2e;
+}
+
+.orders-msg.failed {
+    background: #fde8e8;
+    color: #c0392b;
+}
+
+.order-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.order-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 15px;
+    color: #555;
+}
+
+.order-head .paid {
+    color: #1b7e2e;
+    font-weight: 600;
+}
+
+.order-head .unpaid {
+    color: #c0392b;
+    font-weight: 600;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.order-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.order-item span:nth-child(2) {
+    flex: 1;
+}
+
+.order-foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #eee;
+}

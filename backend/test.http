@@ -1,0 +1,22 @@
+### Cách dùng:
+### 1. Cài extension "REST Client" (tác giả: Huachao Mao) trong VS Code
+### 2. Đảm bảo server đang chạy: node index.js  (hoặc nodemon index.js)
+### 3. Bấm chữ "Send Request" hiện phía trên mỗi request bên dưới
+
+### Kiểm tra server có chạy không
+GET http://localhost:4000/
+
+### Upload ảnh sản phẩm (chọn 1 file ảnh có thật trên máy)
+### Lưu ý: sửa lại đường dẫn ảnh cho đúng máy bạn
+POST http://localhost:4000/upload
+Content-Type: multipart/form-data; boundary=----Boundary
+
+------Boundary
+Content-Disposition: form-data; name="product"; filename="hand_icon.png"
+Content-Type: image/png
+
+< ../economic/src/Components/Assets/hand_icon.png
+------Boundary--
+
+### Xem ảnh tĩnh (thay tên file bằng ảnh thật trong upload/images)
+GET http://localhost:4000/images/product_123456.jpg

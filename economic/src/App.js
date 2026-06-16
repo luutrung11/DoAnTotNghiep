@@ -6,8 +6,11 @@ import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
+import Checkout from './Pages/Checkout';
+import Orders from './Pages/Orders';
 import LoginSignup from './Pages/LoginSignup';
 import { Footer } from './Components/Footer/Footer';
+import ChatBot from './Components/ChatBot/ChatBot';
 import men_banner from './Components/Assets/banner_mens.png'
 import women_banner from './Components/Assets/banner_women.png'
 import kid_banner from './Components/Assets/banner_kids.png'
@@ -24,9 +27,12 @@ function App() {
         <Route path='/kids' element={<ShopCategory banner={kid_banner} category="kid"/>}/>
         <Route path='/product/:productId' element={<Product/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/orders' element={<Orders/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
       </Routes>
       <Footer/>
+      <ChatBot/>
       </BrowserRouter>
     </div>
   );
